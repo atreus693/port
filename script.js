@@ -1,3 +1,4 @@
+// Smooth scrolling for navigation links
 document.querySelectorAll('.nav-buttons a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -10,6 +11,7 @@ document.querySelectorAll('.nav-buttons a').forEach(anchor => {
     });
 });
 
+// Animate header on scroll
 window.addEventListener('scroll', () => {
     const header = document.getElementById('header');
     if (window.scrollY > 50) {
