@@ -1,3 +1,4 @@
+/* styles.css */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -7,93 +8,35 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
-
-/* Header */
 header {
     background: linear-gradient(135deg, #6c3483, #5d2b7a);
     color: #fff;
     padding: 80px 20px;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     transition: all 0.6s ease;
+    transform: translateY(0);
 }
-
 header.scrolled {
     padding: 10px 20px;
     text-align: left;
+    transform: translateY(-10px);
+}
+header h1 {
+    margin: 0;
+    font-size: 3.5em;
+    letter-spacing: 2px;
+    transition: font-size 0.6s ease, margin 0.6s ease, transform 0.6s ease;
+}
+header.scrolled h1 {
+    font-size: 1.5em;
+    margin: 0;
+    transform: translateY(-5px);
 }
 
-/* Sections */
-.section {
-    min-height: 100vh;
-    padding: 100px 20px 20px;
-    text-align: center;
-}
-
-/* Resume Container */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 25px;
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer */
-footer {
-    background: linear-gradient(135deg, #6c3483, #5d2b7a);
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    width: 80%;
-    max-width: 600px;
-    margin: 20px auto 0;
-    border-radius: 20px;
-}
-
-footer a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Navigation Buttons */
-.nav-buttons {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-    z-index: 1000;
-}
-
-.nav-buttons a {
-    background: rgba(108, 52, 131, 0.8);
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 20px;
-    font-weight: bold;
-}
-
-.nav-buttons a:hover {
-    background: #fff;
-    color: #6c3483;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5em;
-    }
-}
+/* Add the remaining CSS from your original code */
