@@ -38,5 +38,256 @@ header.scrolled h1 {
     margin: 0;
     transform: translateY(-5px);
 }
+header p {
+            margin: 10px 0 0;
+            font-size: 1.5em;
+            opacity: 0.9;
+            transition: font-size 0.6s ease, margin 0.6s ease, transform 0.6s ease;
+        }
+        header.scrolled p {
+            font-size: 1em;
+            margin: 0;
+            transform: translateY(-5px); /* Slight upward movement for hover effect */
+        }
+        .section {
+            min-height: 100vh;
+            padding: 100px 20px 20px; /* Add space for fixed header */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #home {
+            background: linear-gradient(135deg, #6c3483, #5d2b7a); /* Updated color */
+            color: #fff;
+        }
+        #resume {
+            background: #fff;
+            position: relative;
+            overflow: hidden; /* Ensure doodles don't overflow */
+        }
+        #about {
+            background: linear-gradient(135deg, #6c3483, #5d2b7a); /* Updated color */
+            color: #fff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 25px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .resume {
+            text-align: left;
+            position: relative;
+            z-index: 2;
+        }
+        .resume h2 {
+            margin-bottom: 20px;
+            color: #6c3483; /* Updated color */
+            border-bottom: 2px solid #5d2b7a; /* Updated color */
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        .resume section {
+            margin-bottom: 25px;
+        }
+        .resume section h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            color: #6c3483; /* Updated color */
+        }
+        .resume section p {
+            font-size: 0.95em;
+            margin: 5px 0;
+            line-height: 1.8;
+        }
+        .resume ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        .resume ul li {
+            margin: 5px 0;
+        }
+        footer {
+            background: linear-gradient(135deg, #6c3483, #5d2b7a); /* Updated color */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 80%; /* Reduced horizontal size */
+            max-width: 600px; /* Limit maximum width */
+            margin: 20px auto 0; /* Centered horizontally */
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 20px; /* Rounded corners */
+        }
+        footer p {
+            margin-bottom: 10px;
+        }
+        footer div {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Space between links */
+        }
+        footer a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+            transition: text-decoration 0.3s ease;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* New Navigation Buttons */
+        .nav-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+        .nav-buttons a {
+            background: rgba(108, 52, 131, 0.8); /* Updated color */
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .nav-buttons a:hover {
+            background: #fff;
+            color: #6c3483; /* Updated color */
+            transform: scale(1.1); /* Slight zoom effect on hover */
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            header p {
+                font-size: 1.2em;
+            }
+            .resume h2 {
+                font-size: 1.5em;
+            }
+            .resume section h3 {
+                font-size: 1.2em;
+            }
+        }
+
+        /* Home and About Sections Styling */
+        #home h1, #about h1 {
+            font-size: 4em; /* Larger font size */
+            margin-bottom: 20px;
+        }
+        #home p, #about p {
+            font-size: 1.5em; /* Larger font size */
+            margin-bottom: 30px;
+        }
+        #about p {
+            max-width: 600px; /* Limit width for better readability */
+        }
+
+        /* Doodles Effect in Resume */
+        #resume::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                /* Circles */
+                radial-gradient(circle, rgba(108, 52, 131, 0.05) 10%, transparent 10%) 0 0,
+                radial-gradient(circle, rgba(108, 52, 131, 0.05) 10%, transparent 10%) 50px 50px,
+                /* Lines */
+                linear-gradient(rgba(108, 52, 131, 0.05) 1px, transparent 1px) 0 0,
+                linear-gradient(90deg, rgba(108, 52, 131, 0.05) 1px, transparent 1px) 0 0;
+            background-size: 
+                100px 100px, /* Circles */
+                50px 50px; /* Lines */
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        /* Bubble Animation */
+        .bubbles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            width: 20px;
+            height: 20px;
+            background: rgba(108, 52, 131, 0.3); /* Updated color */
+            border-radius: 50%;
+            animation: rise linear infinite;
+        }
+        .bubble:nth-child(1) {
+            left: 10%;
+            width: 30px;
+            height: 30px;
+            animation-duration: 7s;
+        }
+        .bubble:nth-child(2) {
+            left: 25%;
+            width: 15px;
+            height: 15px;
+            animation-duration: 5s;
+        }
+        .bubble:nth-child(3) {
+            left: 40%;
+            width: 25px;
+            height: 25px;
+            animation-duration: 9s;
+        }
+        .bubble:nth-child(4) {
+            left: 55%;
+            width: 10px;
+            height: 10px;
+            animation-duration: 6s;
+        }
+        .bubble:nth-child(5) {
+            left: 70%;
+            width: 20px;
+            height: 20px;
+            animation-duration: 8s;
+        }
+        .bubble:nth-child(6) {
+            left: 85%;
+            width: 18px;
+            height: 18px;
+            animation-duration: 10s;
+        }
+        @keyframes rise {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-120vh) scale(0.5);
+                opacity: 0;
+            }
+        }
 
 /* Add the remaining CSS from your original code */
