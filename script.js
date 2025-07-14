@@ -12,7 +12,7 @@ document.querySelectorAll('.nav-buttons a').forEach(anchor => {
     });
 });
 
-// Add scroll event listener to animate the heade
+// Add scroll event listener to animate the header
 window.addEventListener('scroll', () => {
     const header = document.getElementById('header');
     if (window.scrollY > 50) { // When user scrolls down 50px
