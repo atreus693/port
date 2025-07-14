@@ -146,7 +146,16 @@ footer a:hover {
 }
 
 /* New Navigation Buttons */
+.nav-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
 
+}
 .nav-buttons a {
     background: rgba(108, 52, 131, 0.8); /* Updated color */
     color: #fff;
